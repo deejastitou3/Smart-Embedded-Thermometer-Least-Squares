@@ -26,6 +26,19 @@ The system is divided into three main blocks:
 - **Embedded:** C++ (Arduino IDE), ATmega328P, 10-bit ADC.
 - **Software:** Python 3, Tkinter, PySerial, Threading.
 - **Math:** Linear Regression, Least Squares Method.
+##  The Math: Least Squares Filtering
+
+For $N=20$ samples $(x_i, y_i)$, the regression line $y = ax + b$ is calculated as:
+
+$$
+a = \frac{N \sum(x_i y_i) - \sum x_i \sum y_i}{N \sum(x_i^2) - (\sum x_i)^2}
+$$
+
+$$
+b = \frac{\sum y_i - a \sum x_i}{N}
+$$
+
+The system then calculates the absolute error $|y_i - (ax_i + b)|$ for each sample and selects the measurement with the **minimum error** as the optimal temperature.
 
 ##  Project Structure
 Smart-Embedded-Thermometer-Least-Squares/
