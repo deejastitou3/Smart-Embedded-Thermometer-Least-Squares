@@ -7,7 +7,7 @@ An intelligent thermal supervision system that bridges low-level embedded hardwa
 ![Arduino](https://img.shields.io/badge/Hardware-Arduino_UNO-00979D)
 ![Math](https://img.shields.io/badge/Algorithm-Least_Squares-orange)
 
-## 📖 About the Project
+## About the Project
 Analog sensors like the LM35 are highly susceptible to electrical noise and ADC quantization errors. Instead of using a simple moving average, this project implements a statistical filtering approach. By taking 20 consecutive samples and applying linear regression, the system identifies the measurement that best fits the thermal trend, effectively eliminating outliers and providing a highly stable reading.
 
 ##  Key Features
@@ -35,3 +35,17 @@ Smart-Embedded-Thermometer-Least-Squares/
 ├── thermometer.ino      # Arduino C++ firmware
 ├── supervision.py       # Python Tkinter dashboard
 └── requirements.txt     # Python dependencies
+
+## Installation & Usage
+1. Hardware Setup
+Connect the LM35 output pin to Arduino Analog Pin A0.
+(Optional) Connect a push button to Pin 2 to trigger measurements, and a buzzer to Pin 8.
+2. Upload Firmware
+Open thermometer.ino in the Arduino IDE.
+Select your board (Arduino UNO) and port.
+Upload the code.
+3. Run the Supervision Dashboard
+# Install dependencies
+pip install pyserial
+# Run the Python GUI (Make sure to update the COM port in the script if necessary)
+python supervision.py
