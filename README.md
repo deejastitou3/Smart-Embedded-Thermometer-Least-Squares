@@ -50,4 +50,6 @@ pip install pyserial
 # Run the Python GUI (Make sure to update the COM port in the script if necessary)
 python supervision.py
 
-
+## Author
+Khadija Stitou Engineering Student in Intelligent Embedded Systems & Telecommunications 
+LinkedIn : (https://www.linkedin.com/in/khadija-stitou-b42792293)
