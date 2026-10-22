@@ -49,3 +49,5 @@ Upload the code.
 pip install pyserial
 # Run the Python GUI (Make sure to update the COM port in the script if necessary)
 python supervision.py
+
+
